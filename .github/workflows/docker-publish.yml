@@ -85,7 +85,9 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           # tags: ${{ steps.meta.outputs.tags }}
           # labels: ${{ steps.meta.outputs.labels }}
-          tags: ${{ github.repository }}:latest
+          tags: |
+            ${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
