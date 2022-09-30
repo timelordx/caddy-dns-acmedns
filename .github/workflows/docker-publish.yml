@@ -62,13 +62,6 @@ jobs:
       #     flavor: |
       #       latest=true
   
-      ## https://github.com/docker/metadata-action
-      - name: Extract Docker metadata
-        id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: docker.io/caddy
-
       ## https://github.com/docker/build-push-action
       - name: Build and push Docker image
         id: build-and-push
@@ -80,9 +73,7 @@ jobs:
           # labels: ${{ steps.meta.outputs.labels }}
           tags: |
             docker.io/${{ env.IMAGE_NAME }}:latest
-            docker.io/${{ env.IMAGE_NAME }}:${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
             ghcr.io/${{ env.IMAGE_NAME }}:latest
-            ghcr.io/${{ env.IMAGE_NAME }}:${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
