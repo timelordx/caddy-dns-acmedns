@@ -1,7 +1,7 @@
 FROM caddy:builder AS builder
 
-RUN caddy-builder \
-    github.com/caddy-dns/acmedns
+RUN xcaddy build \
+    --with github.com/caddy-dns/acmedns
 
 FROM caddy:latest
 
