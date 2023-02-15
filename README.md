@@ -5,6 +5,8 @@ Caddy Web Server with ACME-DNS Provider
 
 <p>&nbsp;</p>
 
+**DockerHub:** [https://hub.docker.com/r/timelordx/caddy-dns-acmedns](https://hub.docker.com/r/timelordx/caddy-dns-acmedns)
+
 **Docker Pull Command**
 
 * from GitHub Container Registry: 
@@ -25,3 +27,4 @@ docker pull timelordx/caddy-dns-acmedns:latest
 * [Caddy Docker](https://hub.docker.com/_/caddy)
 * [Caddy Server](https://caddyserver.com/docs/)
 * [ACME-DNS module for Caddy Server](https://github.com/caddy-dns/acmedns)
+* [NameCheap with ACME-DNS Provider](https://caddy.community/t/namecheap-with-acme-dns-provider/18944)
