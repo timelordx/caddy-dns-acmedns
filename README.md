@@ -24,3 +24,4 @@ docker pull timelordx/caddy-dns-acmedns:latest
 * [Caddy Server](https://caddyserver.com/docs/)
 * [ACME-DNS module for Caddy Server](https://github.com/caddy-dns/acmedns)
 * [NameCheap with ACME-DNS Provider](https://caddy.community/t/namecheap-with-acme-dns-provider/18944)
+* [Synology Certificate Deployer](https://github.com/timelordx/synology-cert-deploy)
