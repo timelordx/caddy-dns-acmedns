@@ -26,4 +26,4 @@ jobs:
         uses: gautamkrishnar/keepalive-workflow@v2
         with:
           workflow_files: "docker-publish.yml"
-          time_elapsed: "50"
+          time_elapsed: "0"
