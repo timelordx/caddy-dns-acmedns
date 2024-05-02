@@ -1,0 +1,29 @@
+## https://github.com/marketplace/actions/keepalive-workflow
+## https://github.com/gautamkrishnar/keepalive-workflow
+name: Keepalive Workflow
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+jobs:
+  ## prevent GitHub from suspending cronjob based triggers due to repository inactivity
+  keepalive-cronjob-based-github-actions:
+    name: Keepalive Workflow
+    runs-on: ubuntu-latest
+    
+    steps:
+      ## https://github.com/actions/checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      ## https://github.com/marketplace/actions/keepalive-workflow
+      - name: Keep workflows alive
+        uses: gautamkrishnar/keepalive-workflow@v2
+        with:
+          workflow_files: "docker-publish.yml"
+          time_elapsed: "50"
